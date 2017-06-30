@@ -154,7 +154,7 @@ class GoogleUserController extends Controller
                 //     $message->from("mike.lee881123@gmail.com",'Michael Lee');
                     
                 // });
-                \Mail::to($container['email'],$container['name'])->send(new Hello());
+                \Mail::to($container['email'],$container['name'])->send(new Hello($name));
                 array_push($keys,$emailAddress,$name);
             }
 
