@@ -45,11 +45,11 @@ class GoogleUserController extends Controller
         $httpClient = $gclient->setHttpClient($guzzleClient);
         
 
-        
+        //Generate Service Instance
         $google_oauthV2 = new \Google_Service_Oauth2($gclient);
         
         if ($request->get('code')){
-            
+            //Request the AccessToken by passing authorization code
             $gclient->authenticate($request->get('code'));
             
             $request->session()->put('token', $gclient->getAccessToken());

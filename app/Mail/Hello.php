@@ -28,6 +28,7 @@ class Hello extends Mailable
      */
     public function build()
     {
-        return $this->from('mike.lee881123@gmail.com')->markdown('emails.hello');
+        $from = config('mail.username');
+        return $this->from($from)->markdown('emails.hello');
     }
 }
