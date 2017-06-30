@@ -12,6 +12,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- External Js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+    <!--OAuth2 Initialize-->
+    <script>
+        function start() {
+            gapi.load('auth2',function() {
+                auth2 = gapi.auth2.init({
+                    client_id: '14473722966-gdnbfrr17vg2lobfgedqmab6cfs6c5mn.apps.googleusercontent.com'
+                });
+            });
+        }
+    </script>
 </head>
 <body>
     <div id="app">

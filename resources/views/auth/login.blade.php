@@ -60,6 +60,7 @@
                             </div>
                         </div>
                     </form>
+                    <a href="{{ route('GoogleUser') }}" id="SignInGoogle" class="btn btn-primary">Sign In With Google</a>
                 </div>
             </div>
         </div>
